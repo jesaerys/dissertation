@@ -1,0 +1,118 @@
+University thesis template
+==========================
+
+An archive containing the latex thesis template and example document can be
+obtained at http://www.grad.umn.edu/students/ThesisSubmission/index.html . (If
+the link changes in the future, one should be able to find it by searching the
+UofM website for "thesis template", "thesis submission", or something similar.)
+Although the archive is named MASTERS, it is also be used for PhD
+dissertations. The main files are,
+
+- mnthesis.cls : The actual thesis template.
+- thesis_masters.tex : The main tex file that pulls all of the other source
+  files together.
+- title.tex : The source file for the title page. It also illustrates some of
+  the commands defined in mnthesis.cls and pulls in content for the abstract,
+  acknowledgments, and other special thesis things.
+
+Also included are the hunsrt.bst bibliography style file and bigstrut.sty
+package for tables, but these don't have to be used. The other files are just
+example tex source files for the actual thesis content.
+
+
+
+Making latex work as expected
+=============================
+
+Chances are the dissertation won't be written from scratch. Rather, each
+previously or soon-to-be published paper will be make up a separate chapter of
+the dissertation. And, chances are, these papers have been written using
+aastex.cls or emulateapj.cls and some collection of packages imported with
+``\usepackage`` (e.g., amsmath and related pacakges are fairly common). The
+goal, then, is to import this prewritten content into the thesis document with
+as little effort as possible. Packages should still work as expected; just use
+the same ``\usepackage`` commands in thesis.tex and hopefully there won't be
+any conflicts with mnthesis.cls. Most often, however, the challenge is that
+mnthesis.cls does not know or care about conventional use of latex in
+astronomy, so familiar things like natbib/bibtex and deluxetable simply aren't
+available. Here are some workarounds to avoid painful fights with latex.
+
+
+aastex stuff
+------------
+
+Some things, e.g., being able to use ``\apj`` in a bibliographic definition,
+are fairly ingrained and it would be nice to use them in the thesis document.
+One solution is to pull out all of the relevant bits from aastex.cls [1]_ and
+create a custom package that can be loaded in thesis.tex. Conveniently, former
+grad Pete Mendygral has already done this in a file called aastex_hack.sty
+[2]_, which makes available just about every journal abbreviation and symbol
+from aastex, as well as the ``\plottwo`` environment. aastex also calls on
+amssymb.
+
+The deluxetable environment is technically part of the aastex class file, but
+Alexey Vikhlinin has created a package called deluxetable.sty that can be
+loaded separately [3]_.
+
+To use these packages, add these lines to thesis.tex::
+
+  \usepackage{aastex_hack}
+  \usepackage{amssymb}
+  \usepackage{deluxetable}
+
+
+natbib and bibtex
+-----------------
+
+aastex implicitly uses natbib, and many people like to use bibtex so that they
+can manage their references in a separate file. To get these working with the
+thesis template, just copy natbib.sty [4]_ and apj.bst [5]_ into the working
+directory, and then include these lines in thesis.tex::
+
+  \usepackage{natbib}
+  \bibliographystyle{apj}
+
+
+Figures
+-------
+aastex uses the graphicx package, so in thesis.tex add the line, ::
+
+  \usepackage{graphicx}
+
+
+
+
+
+
+.. [1] texlive/2011/texmf-dist/tex/latex/aastex/aastex.cls
+.. [2] (where can this file be hosted?)
+.. [3] http://casa.colorado.edu/~danforth/comp/tex/deluxetable.sty
+.. [4] texlive/2011/texmf-dist/tex/latex/natbib/natbib.sty
+.. [5] http://ads.harvard.edu/pubs/bibtex/astronat/apj/apj.bst
+
+
+
+Existing papers
+===============
+
+- Strip out the preamble, adding whatever is necessary to the preamble in
+  thesis.tex, and get rid of the document environment.
+- Change ``\title{...}`` to ``\chapter{...}``. Should probably add a ``\citep``
+  to the end of the title if it is a published work.
+- Get rid of authors (``\author``, ``\shortauthors``), affiliations
+  (``\altaffiltext``), ``\thanks``, ``\keywords``, etc.
+- Change ``\begin/end{abstract}`` to ``\begin/end{quote}``. Inside the quote
+  environment, add something like::
+
+    \begin{center}
+    \textbf{\large Abstract}
+    \end{center}
+
+- Explicitly setting ``\figurenum`` doesn't work. Use
+  ``\addtocounter{figure}{...}`` instead.
+- ``\begin/end{deluxetable*}`` is not available. Use the standard
+  ``\begin/end{deluxtable}`` instead.
+- Use something like ``\tabletypesize{\footnotesize}`` right after entering the
+  deluxetable environment for better font size in the table.
+
+

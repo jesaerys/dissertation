@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+# main
+# ====
+#
+# Load up Vim for kickass thesis editing.
+#
+# Folds
+# -----
+# Saving folds so that they can be loaded in a future session::
+#
+#   :mkview vim-view.vim
+#
+# Spell checking
+# --------------
+# Here are some useful commands::
+#
+#   ]s : next bad word
+#   [s : previous bad word
+#   zg : mark word as good in spell file (undo with zug)
+#   zw : mark word as wrong in spell file (undo with zuw)
+#   z= : spelling suggestions
+#
+# Note that zug and zuw only add comment characters to the spell file. To clean
+# these up::
+#
+#   :runtime spell/cleanadd.vim
+#
+# Anytime the spell file is updated, vim will (usually) create an associated
+# .spl file which is used for spell checking. Sometimes, however, the .spl file
+# doesn't exist. To create one without modifying the current spell file, use
+# the mkspell utility::
+#
+#   :mkspell spell.utf-8.add
+#   :set spellfile=spell.utf-8.add
+#   :set spell
+
+vim -c "source vim-view.vim" \
+    -c "set spellfile=spell.utf-8.add" \
+    -c "set spell" \
+    notes.txt \
+    dissertation.tex \
+    title.tex \
+    abstract.tex \
+    acknowledgments.tex \
+    dedication.tex \
+    introduction.tex \
+    uv_regions.tex \
+    m31flux.tex \
+    summary.tex \
+    references.bib \

@@ -1,0 +1,1160 @@
+\chapter{The Panchromatic Hubble Andromeda Treasury. \textsc{VI}. The
+    reliability of far-ultraviolet flux as a star formation tracer on sub-kpc
+    scales \citep{Simones:2014}.
+}
+\label{uv_regions}
+
+
+
+
+
+\begin{quote}
+\begin{center}
+\textbf{\large Abstract}
+\end{center}
+
+We have used optical observations of resolved stars from the Panchromatic
+Hubble Andromeda Treasury (PHAT) to measure the recent ($< 500\myr$) star
+formation histories (SFHs) of 33 \fuv{}-bright regions in M31. The region areas
+ranged from $\sim 10^4$ to $10^6\pc^2$, which allowed us to test the
+reliability of \fuv{} flux as a tracer of recent star formation on sub-kpc
+scales. The star formation rates (SFRs) derived from the extinction-corrected
+observed \fuv{} fluxes were, on average, consistent with the 100-Myr mean SFRs
+of the SFHs to within the $1\sigma$ scatter. Overall, the scatter was larger
+than the uncertainties in the SFRs and particularly evident among the smallest
+regions. The scatter was consistent with an even combination of discrete
+sampling of the initial mass function and high variability in the SFHs. This
+result demonstrates the importance of satisfying both the full-IMF and the
+constant-SFR assumptions for obtaining precise SFR estimates from \fuv{} flux.
+Assuming a robust \fuv{} extinction correction, we estimate that a factor of
+2.5 uncertainty can be expected in \fuv{}-based SFRs for regions smaller than
+$10^5\pc^2$, or a few hundred pc. We also examined ages and masses derived from
+UV flux under the common assumption that the regions are simple stellar
+populations (SSPs). The SFHs showed that most of the regions are not SSPs, and
+the age and mass estimates were correspondingly discrepant from the SFHs. For
+those regions with SSP-like SFHs, we found mean discrepancies of $10\myr$ in
+age and a factor of 3 to 4 in mass. It was not possible to distinguish the
+SSP-like regions from the others based on integrated \fuv{} flux.
+
+\end{quote}
+
+
+
+
+
+\section{Introduction}
+
+A common technique for estimating global star formation rates (SFRs) in
+individual galaxies is to measure the total flux at wavelengths known to trace
+recent star formation (SF), such as ultraviolet (UV) emission from
+intermediate- and high-mass stars. After correcting for dust extinction, an
+observed flux can be converted into a SFR using a suitable calibration, which
+is typically a linear scaling of intrinsic luminosity derived from population
+synthesis modeling. The modeling process requires a set of stellar evolution
+models and a stellar initial mass function (IMF), as well as a characterization
+of the star formation history (SFH; the evolution of SFR over time) and the
+metallicity of the population. These quantities are often not well-constrained
+for a given system and need to be assumed (see reviews by
+\citealt{Kennicutt:1998}, \citealt{Kennicutt:2012}, and references therein).
+
+A set of flux calibrations widely used in extragalactic studies were presented
+by \citet[][see \citealp{Kennicutt:2012} for updates]{Kennicutt:1998}. These
+calibrations are based on models of a generic population with solar
+metallicity, a fully populated IMF, and a SFR that has been constant over the
+lifetime of the tracer emission ($\sim 100\myr$ for UV). The flux calibrations
+are therefore applicable to any population that can be assumed to approximate
+the generic population, such as spiral galaxies. In environments with low total
+SF (i.e., low mass) or on subgalactic scales, however, the assumptions of a
+fully populated IMF and a constant SFR start to become tenuous. As a result,
+applying the flux calibrations in these situations can lead to inaccurate SFR
+estimates.
+
+For populations located within a few Mpc, it is possible to measure SFRs more
+directly by fitting the color magnitude diagram (CMD) of the resolved stars to
+obtain a SFH \citep{Dolphin:2002}. At its core, CMD fitting is a population
+synthesis technique just like flux calibration (albeit much more complex) and
+thus requires a set of stellar evolution models, an IMF, and an accounting of
+dust. The primary advantage of CMD fitting over the flux calibration method for
+obtaining SFRs, however, is the elimination of assumptions about the SFH and
+metallicity. CMD-based SFHs thus provide a relative standard for testing the
+accuracy of SFR estimates from commonly used flux calibrations, especially in
+applications where the underlying full-IMF and constant-SFR assumptions are not
+strictly satisfied. More generally, the SFHs can be used to test results from
+any other flux-based method, such as ages and masses derived under the simple
+stellar population (SSP) assumption.
+
+With recent Hubble Space Telescope (HST) observations from the Panchromatic
+Hubble Andromeda Treasury \citep[PHAT;][]{Dalcanton:2012}, we have measured the
+recent SFHs ($< 500\myr$) of 33 UV-bright regions in M31 and compared
+them with SFRs derived from UV flux. We also compared the SFHs with ages and
+masses derived from UV flux by treating the regions as SSPs. The UV-bright
+regions were cataloged by \citet[][\citetalias{Kang:2009} hereafter]{Kang:2009} using
+Galaxy Evolution Explorer (GALEX) far-UV (\fuv{}, $\lambda \sim
+1540\ang$) flux and have areas ranging from $10^4$ to
+$10^6\pc^2$. This range of sizes allowed us to test the reliability
+of the full-IMF, constant-SFR, and SSP assumptions on sub-kpc scales.
+
+This paper is organized as follows. We describe our sample of UV-bright regions
+and show their CMDs from the PHAT photometry in \S \ref{uvr:observations}. We
+summarize the CMD-fitting process, describe our extinction model, and present
+the resulting SFHs of the regions in \S \ref{uvr:sfhs}. \S \ref{uvr:fluxmod} describes
+the modeling of UV magnitudes from the SFHs, and \S \ref{uvr:sfrs} describes the
+total masses and the mean SFRs from the SFHs, as well as the SFRs based on UV
+flux. In \S \ref{uvr:discussion}, we compare the UV flux-based SFRs, ages, and
+masses with the results from the SFHs, discuss the applicability of the
+full-IMF, constant-SFR, and SSP assumptions to our sample, and attempt to
+quantify the uncertainties associated with using UV flux to estimate SFRs,
+ages, and masses for sub-kpc UV-bright regions.
+
+
+% Figure 1
+\begin{figure}
+\centering
+\includegraphics[scale=1]{uv_regions-figures/map_full.pdf}
+\caption[Two-color composite mosaic of M31 from the GALEX Deep Imaging Survey.]{Two-color composite mosaic of M31 from the GALEX Deep Imaging Survey
+    (\fuv{} in blue, \nuv{} in orange in the color version). The HST/ACS outlines of
+    the PHAT survey area and Brick 15 are highlighted in black and gray (blue
+    and orange in the color version), respectively. Brick 15 covers a portion of the 10-kpc
+    star-forming ring. The scale bar indicates a distance of $5\kpc$
+    along both the major and minor axes of M31 assuming an inclination of
+    $78\ddeg$ \citep{Tully:1994}.
+}
+\label{fig:uvr:map_full}
+\end{figure}
+
+
+% Figure 2
+\begin{figure}
+\centering
+\includegraphics[scale=1]{uv_regions-figures/map_b15.pdf}
+\caption[Closeup of Brick 15.]{Closeup of Brick 15 from the same image in Figure \ref{fig:uvr:map_full}.
+    Brick 15 contains 33 of the UV-bright regions from the \citet{Kang:2009}
+    catalog (highlighted in blue in the color version), and are labeled by ID
+    number (see Table \ref{tab:uvr:observations}). The region areas, deprojected
+    assuming an inclination of $78\ddeg$ \citep{Tully:1994}, range from
+    $\sim 10^4$ to $10^6\pc^2$. The scale bar indicates a distance of
+    $500\pc$ along both the major and minor axes of M31.
+}
+\label{fig:uvr:map_b15}
+\end{figure}
+
+
+
+
+
+\section{Observations and photometry}\label{uvr:observations}
+
+\subsection{UV-Bright Regions in M31}\label{uvr:observations.galex}
+
+% First mention: Figure 1
+% First mention: Figure 2
+A set of UV-bright regions in M31 were defined by \citetalias{Kang:2009} using \fuv{}
+observations from GALEX. To summarize, \citetalias{Kang:2009} defined a region as
+any area covering at least 50 contiguous pixels ($113\aarcsec^2$) with
+\fuv{} surface brightness $\lesssim 25.9\mmag\aarcsec^{-2}$ (AB
+mag). For our sample, we selected the subset of these regions that were within
+``Brick 15'' of the PHAT survey, a 0.15-deg$^2$ area consisting of 18
+individual fields, or HST pointings, covering the 10-kpc star-forming ring
+(Figures \ref{fig:uvr:map_full} and \ref{fig:uvr:map_b15}). Of all the bricks
+comprising the PHAT survey area, Brick 15 contains the greatest amount of SF
+and the largest number regions -- 33 total, with respect to the combined
+outline of its Advanced Camera for Surveys (ACS) images.
+
+% First mention: Table 1
+The identification numbers and locations of the regions in our sample as
+reported in \citetalias{Kang:2009} are given in Table \ref{tab:uvr:observations}. For
+each region, \citetalias{Kang:2009} measured the integrated \fuv{} and \nuv{} (near-UV,
+$\lambda \sim 2320\ang$) magnitudes and subtracted the local
+background estimated within a concentric annulus. We list the observed,
+background-subtracted \fuv{} magnitudes, \fuvobs{}, and UV colors,
+\fuvnuvobs{} in Table \ref{tab:uvr:observations}. Table
+\ref{tab:uvr:observations} also lists the solid angles and deprojected physical
+areas of the regions, which we calculated assuming a distance to M31 of
+$785\kpc$ \citep{McConnachie:2005} and a disk inclination of
+$78\ddeg$ \citep{Tully:1994}. The areas range from $7.9 \times 10^3$ to
+$7.3 \times 10^4\pc^2$, with one large outlier at $1.5 \times
+10^6\pc^2$ (region 4308).
+
+
+% Table 1
+\input{uv_regions-tables/table1}
+
+
+
+\subsection{PHAT photometry}\label{uvr:observations.phat}
+
+The resolved star photometry used in this study was taken from the PHAT Year 1
+data release \citep{Dalcanton:2012}. The PHAT photometric catalogs were
+generated using DOLPHOT, a version of HSTPHOT \citep{Dolphin:2000} with added
+ACS- and Wide Field Camera 3-specific modules. Although the wavelength coverage
+of PHAT extends from the UV to the near-infrared, we have used only the ACS
+optical images (\acsb{} and \acsi{} filters) since they contain the greatest
+numbers of stars and reach the deepest CMD features of the three PHAT cameras.
+
+We applied quality cuts to the raw ACS photometric catalogs to minimize
+non-stellar contaminants in our CMDs. Specifically, we required that each
+object meet the following restrictions: $\mathtt{SNR}_\acsb \ge 4$,
+$\mathtt{SNR}_\acsi \ge 4$, $(\mathtt{sharp}_\acsb^2 + \mathtt{sharp}_\acsi^2)
+\le 0.075$, and $(\mathtt{crowd}_\acsb^2 + \mathtt{crowd}_\acsi^2) \le 1.0$,
+where $\mathtt{SNR}$, $\mathtt{sharp}$, and $\mathtt{crowd}$ refer to the
+DOLPHOT signal-to-noise, sharpness, and crowding parameters in each filter.
+These quality cuts are the ``gst'' cuts described in the main PHAT data release
+\citep{Dalcanton:2012}.
+
+% First mention: Figure 3
+We extracted all stars within the boundaries of the 33 UV-bright regions,
+combining photometry as needed for regions extending across multiple ACS
+fields. We did not take advantage of the improved signal-to-noise ratio where
+fields overlapped. The CMDs of the Brick 15 UV-bright regions are shown in
+Figure \ref{fig:uvr:cmd_grid}.
+
+
+% Figure 3
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{uv_regions-figures/cmd_grid.pdf}
+\caption[Optical color-magnitude diagrams of the UV-bright regions.]{Optical
+    color-magnitude diagrams (ACS/WFC filters \acsb{} and \acsi{}) of
+    the UV-bright regions. Region ID numbers and the numbers of stars fit by
+    MATCH are shown in each panel. The MATCH fit area is inside the solid gray
+    line, where the faint end marks the 50\% completeness limit in \acsb{}. Stars
+    within the dashed line (red in the color version) were excluded from the
+    fit. The combined region includes all regions except 4308. The CMDs show
+    broadening of the main sequence and other features, indicating that the
+    regions are subject to nontrivial amounts of differential extinction from
+    dust internal to M31.
+}
+\label{fig:uvr:cmd_grid}
+\end{figure*}
+
+
+
+\subsection{Artificial star tests}\label{uvr:observations.asts}
+
+To assess observational errors and characterize photometric completeness, we
+conducted $\sim 2.5 \times 10^4$ artificial star tests (ASTs) for each of the
+regions. The color and magnitude distributions for the ASTs were modeled after
+the CMDs of the individual regions. However, as discussed below in \S
+\ref{uvr:sfhs.extinction}, we excluded the red giant branch (RGB) and red clump
+(RC) from the SFH analysis. We therefore only considered ASTs with properties
+similar to the blue portion of the CMDs, including the luminous main sequence
+(MS).
+
+We used the ASTs to compute the photometric completeness functions for each of
+the 33 regions. The completeness functions were consistent throughout the
+sample, with an uncertainty of $0.06\mmag$ in the mean 50\%
+completeness limit in each filter. In addition, the photometric errors varied
+little between the regions. These consistencies allowed us to combine the ASTs
+from the individual regions for a total of $1.6 \times 10^6$ ASTs. This
+hundredfold increase in the number of ASTs available to each region provided a
+superior CMD error model for the SFH measurement process. The 50\% completeness
+limits of the region sample are $27.0\mmag$ in \acsb{} and
+$26.2\mmag$ in \acsi{}.
+
+
+
+
+
+\section{The recent SFHs of UV-bright regions in M31}\label{uvr:sfhs}
+
+The derivation of the SFHs for the UV-bright regions is described in this
+section. The first subsection gives a brief discussion of the SFH code and
+describes the overall SFH measurement procedure from beginning to end. Details
+of the extinction model, the resulting SFHs, and our uncertainty analysis are
+discussed in the subsequent subsections.
+
+
+
+\subsection{CMD modeling with MATCH}\label{uvr:sfhs.measurement}
+
+We used the SFH code MATCH \citep{Dolphin:2002} to measure the SFHs of our sample
+of UV-bright regions. Assuming a stellar IMF, binary fraction, and a set of
+stellar evolution models, MATCH constructs a series of synthetic CMDs over
+given ranges in distance, age, metallicity, and extinction. The synthetic CMDs
+are convolved with the error model from the ASTs to account for observational
+errors. Linear combinations of the synthetic CMDs form a model which is
+assigned a fit value based on a comparison with the observed CMD. The SFH of
+the model CMD that minimizes the fit value is considered the most likely SFH of
+the observed population given the input parameters. We emphasize that MATCH
+models the \emph{distribution} of stars in the observed CMD, not the ages and
+masses of the individual stars.
+
+The fit statistic used by MATCH is equal to $-2 \ln \Lambda_P$, where
+$\Lambda_P$ is the Poisson likelihood ratio. According to Wilks' theorem, this
+statistic is asymptotically $\chi^2$ distributed, allowing us to estimate the
+$n\sigma$ confidence limits in a set of SFH solutions using the condition
+$\mathrm{fit-fit_{min}} \le n^2$, where $\mathrm{fit_{min}}$ corresponds to the
+best-fit SFH. This method was used to estimate various uncertainties in \S
+\ref{uvr:sfhs.results} and \S \ref{uvr:sfhs.uncertainties}.
+
+We assumed the following for our SFH measurements:
+\begin{enumerate}
+\item A Kroupa IMF \citep{Kroupa:2001}.
+\item The Padova stellar evolution models for masses between 0.15 and
+    $120\msun$ (the IMF was normalized using masses down to
+    $0.01\msun$) including updated low-mass asymptotic giant branch tracks
+    \citep{Girardi:2010}.
+\item A binary fraction of 0.35 with a uniform secondary mass distribution.
+\item A distance modulus of 24.47 \citep{McConnachie:2005}. The distance to M31 is
+    fairly well-known, allowing us to fix this value and eliminate a free
+    parameter in the CMD fitting process.
+\item A set of 48 log-spaced age bins from $\logten(\age/\yr) = 6.60$
+    to $9.00\dex$ with width $\Delta \logten(\age/\yr) =
+    0.05\dex$ (though as discussed in \S \ref{uvr:sfhs.results}, we
+    ultimately only consider the SFH out to $500\myr$, or
+    $\logten(\age/\yr) = 8.70$).
+\item A metallicity range of $\met = -2.3$ to $0.1\dex$ at
+    a resolution of $0.1\dex$ with the requirement of a monotonically
+    increasing chemical evolution model.
+\end{enumerate}
+
+We also simulated the effects of intervening Galactic foreground populations
+using the TRILEGAL population synthesis model \citep{Girardi:2005}. The solid
+angles of the regions were small enough, however, that no more than a few
+foreground stars were expected per CMD, implying a negligible impact on our
+final results.
+
+% First mention: Figure 4
+Extinction was modeled using two parameters, \avf{} and
+\dav{}, as described in \S \ref{uvr:sfhs.extinction}. For each region, we
+sampled the extinction parameter surface using a combination of pattern search
+and grid search techniques, measuring the best-fit SFH at each point. The
+search procedure resulted in an irregularly-sampled grid of MATCH fit values
+with a minimum step size of $0.05\mmag$ in both \avf{} and
+\dav{}.\footnote{Computing fully-sampled grids for the regions at
+$0.05\mmag$ resolution over reasonable ranges in \avf{} and
+\dav{} was found to be computationally infeasible.} We then compared
+the fit values across the grid to find the overall best-fit SFH. Figure
+\ref{fig:uvr:cmdfit_4339} shows an example model CMD for the best-fit SFH of region
+4339, along with the observed CMD and the residual significance.
+
+
+% Figure 4
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{uv_regions-figures/cmdfit_4339.pdf}
+\caption[Observed CMD of region 4339, with the best-fit modeled CMD and the
+    residual significance.]{Observed CMD of region 4339, with the best-fit modeled CMD and the
+    residual significance (the observed CMD minus the modeled CMD, weighted by
+    the variance). The shading in the observed and modeled CMDs represents the
+    number of stars, $N$, in each color and magnitude bin. The CMD limits
+    correspond to the solid gray lines shown in Figure \ref{fig:uvr:cmd_grid}, and
+    the dashed line (red in the color version) shows the area excluded from
+    the fitting process. We find no systematic residuals in the MS, indicating
+    that the model is a good fit to the data.
+}
+\label{fig:uvr:cmdfit_4339}
+\end{figure*}
+
+
+
+\subsection{Extinction model}\label{uvr:sfhs.extinction}
+
+\citetalias{Kang:2009} measured the average \ebv{} reddening in each
+region using the reddening-free parameter $Q$ and UBV photometry for individual
+OB stars, providing us with possible constraints on extinction for CMD fitting
+with MATCH. However, the CMDs in Figure \ref{fig:uvr:cmd_grid} show broadening of
+the intrinsically narrow MS, indicating that the regions are subject to
+nontrivial amounts of differential extinction from dust internal to M31. In
+some regions the differential extinction is severe enough that the MS appears
+doubled. Differential extinction is also evident in the population of older
+stars, which we assume to be reasonably well-mixed throughout the galaxy,
+characterized by a broad RGB and an elongation of the RC along the reddening
+vector. These complexities lead to poor results when fitting an entire CMD with
+a single extinction value, such as that obtained from the average
+\ebv{} in a region.
+
+To fit the CMDs more accurately, we adopted a two-parameter extinction model
+consisting of a foreground dust component and a differential component. The
+total V-band extinction common to all stars in the CMD is set by the foreground
+parameter, \avf{}. Differential extinction is added to the stars in
+varying amounts following a uniform distribution from zero up to a maximum
+determined by the differential parameter, \dav{}. Compared to the
+simplest case of optimizing a single extinction parameter, this extinction
+model provided much better fits for the observed CMDs while allowing MATCH to
+compute best-fit SFH solutions in a reasonable amount of time.
+
+A specific shortcoming of the model, however, is that not all populations are
+expected to have the same extinction profile. Young stars tend to reside closer
+to the midplane of the galaxy and are likely to be physically associated with
+cold dense gas that hosts the dusty ISM. The older RGB and RC stars, which
+dominate the CMDs of the regions, can have a much larger scale height in
+comparison. To prevent the older populations from influencing the parameters of
+the extinction model we excluded all stars with both $\acsb - \acsi >
+1.25$ and $\acsb > 21.0\mmag$ (dashed lines in Figures
+\ref{fig:uvr:cmd_grid} and \ref{fig:uvr:cmdfit_4339}) from the CMD fitting process. The
+SFHs and extinction parameters we derive from MATCH therefore correspond only
+to the distributions of massive MS stars (the primary producers of UV flux) as
+well as any blue and red He-burning stars in the CMDs.
+
+By creating an exclusion area in the CMD, we necessarily place a limit on the
+total extinction that can be determined by MATCH. From the CMDs in Figure
+\ref{fig:uvr:cmd_grid}, the maximum amount of reddening a MS star can have before
+entering the exclusion area is $\acsb - \acsi \approx
+1.7\mmag$. Assuming the extinction curve from \citet[][see \S
+\ref{uvr:discussion.fuv}]{Cardelli:1989}, this amount of reddening corresponds to a
+total extinction of $\avf + \dav \approx
+2.8\mmag$. CMD models with total extinction at this limit are
+indistinguishable from higher-extinction models because stars in the exclusion
+area do not affect the MATCH fit statistic. We therefore place an upper limit
+of $2.8\mmag$ on the total extinction, $\avf +
+\dav$, during the optimization of the SFHs described in \S
+\ref{uvr:sfhs.measurement}.
+
+One caveat for our two-component model is that observational studies of the ISM
+routinely demonstrate log-normal, not uniform, density distributions
+\citep[e.g.,][]{Berkhuijsen:2008, Hill:2008, Ballesteros-Paredes:2011, Shetty:2011, Dalcanton:2014}.
+Modeling the extinctions in M31 with log-normal distributions has been
+successful for producing extinction maps that agree with the emission from dust
+and gas \citep{Dalcanton:2014}. Implementing such a model in MATCH would require a
+minimum of three parameters: a foreground component, and the mean and variance
+for the log-normal. A more realistic extinction model might account for the
+fraction of stars affected by the log-normal as well as the scale height of the
+stars relative to the gas in the disk, which can vary with age. With each
+additional parameter, however, the size of the search space increases
+exponentially and measuring the SFH of a single region quickly becomes
+impractical. It is difficult to assess how the derived SFHs are affected by our
+comparatively simple extinction model without repeating the measurements with a
+more sophisticated model. Even so, the quality of the residuals for the modeled
+CMDs (e.g., Figure \ref{fig:uvr:cmdfit_4339}) suggests that the two-component model
+is reasonably accurate.
+
+
+
+\subsection{Results}\label{uvr:sfhs.results}
+
+% First mention: Figure 5
+% First mention: Table 2
+We present the SFHs of the UV-bright regions in Figure \ref{fig:uvr:sfh_grid}. The
+corresponding best-fit \avf{} and \dav{} parameters are
+listed in Table \ref{tab:uvr:SFHdata}. The uncertainties of the parameters for each
+region correspond to the minimum and maximum values among the set of SFHs
+within $1\sigma$ of the best-fit SFH on the $\avf,\dav$
+surface (i.e., all SFHs for which $\mathrm{fit-fit_{min}} \le 1$; see \S
+\ref{uvr:sfhs.measurement}). The final metallicities of the best-fit SFHs for all
+regions ranged from $-1.30\dex \le \met \le
+0.01\dex$, with 80\% of the values within $0.3\dex$ of the
+mean, $\met = -0.3\dex$.
+
+The exclusion area in the CMDs and the 50\% photometric completeness limit both
+restrict the age of the oldest population that can be fit by MATCH. Through
+synthetic CMD modeling, we found that a significant fraction of the stars in
+populations older than $\sim 500\myr$ are either within the exclusion
+area or below the 50\% photometric completeness limit. In comparison, younger
+populations are well-represented in the MS/He-burning area of the CMD. We
+therefore adopted $500\myr$ as the maximum reliable age of the SFHs.
+
+Considering that the UV emission from an SSP becomes negligible after $\sim
+100\myr$ \citep{Gogarten:2009, Leroy:2012}, we chose to display only the
+past $200\myr$ of the SFHs. This was done to show as much of the
+overall history as possible while preserving sufficient detail in the
+$0-100\myr$ range. Also, the SFHs are shown at a coarser time
+resolution than the actual resolution of $\Delta \logten(\age/\yr) =
+0.05\dex$ to simplify visual comparisons between the regions.
+\emph{We use the full-resolution SFHs for all analyses that follow.}
+
+The Padova stellar evolution models used to fit the CMDs do not include ages
+less than $4\myr$, creating a gap between the present time and the
+youngest age bin in the SFHs. To account for this, we extended the youngest bin
+to cover the ages in the gap and rescaled its SFR such that the total mass
+formed in the bin was conserved.
+
+
+% Figure 5
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{uv_regions-figures/sfh_grid-4285-4313.pdf}
+\caption[SFHs of UV-bright regions in M31.]{SFHs of UV-bright regions in M31 (SFR versus Age or time $t$, where
+    the present is $\age = t = 0$; black histogram). The SFH for the
+    combined region in Figure \ref{fig:uvr:cmd_grid} was derived independently. The
+    region ID number and deprojected area are given in each panel. The vertical
+    long-dashed line (red in the color version) shows \agessp{},
+    the SSP age from \citet{Kang:2009}, which does not accurately describe the
+    majority of the SFHs. The dashed-dotted line (purple in the color version) shows the
+    constant SFR, \sfrfuv{}, obtained from the extinction-corrected
+    observed \fuv{} fluxes. The short-dashed and dotted lines (blue and green
+    in the color version) show \sfroneh{} and \sfrfiveh{}, the mean SFRs over the last 100 and
+    $500\myr$, respectively.
+}
+\label{fig:uvr:sfh_grid}
+\end{figure*}
+
+% Figure 5, continued: page 6
+\addtocounter{figure}{-1}
+\begin{figure*}
+\begin{center}
+%\figurenum{\ref{fig:uvr:sfh_grid}}
+\includegraphics[width=\textwidth]{uv_regions-figures/sfh_grid-4314-4339.pdf}
+\caption{\textit{Cont.}}
+\end{center}
+\end{figure*}
+
+% Figure 5, continued: page 7
+\addtocounter{figure}{-1}
+\begin{figure*}
+\begin{center}
+%\figurenum{\ref{fig:uvr:sfh_grid}}
+\includegraphics[width=\textwidth]{uv_regions-figures/sfh_grid-4345-0000.pdf}
+\caption{\textit{Cont.}}
+\end{center}
+\end{figure*}
+
+
+% Table 2
+\input{uv_regions-tables/table2}
+
+
+
+\subsection{Uncertainties}\label{uvr:sfhs.uncertainties}
+
+The random uncertainties of the SFHs were evaluated using the Hybrid Monte
+Carlo (HMC) method described in \citet{Dolphin:2013}. With this method, the SFH
+probability density function (PDF) is estimated from a sequence (or chain) of
+samples in SFH space, which is parameterized by age, metallicity, and SFR. Each
+sample in the chain is proposed and then either accepted or rejected using
+Hamiltonian dynamics to efficiently obtain a set of samples that are
+distributed according to the underlying PDF. For each region, we ran the HMC
+algorithm for a total of $10^4$ accepted proposals and calculated the $1\sigma$
+random uncertainties from the narrowest interval containing 68\% of the area
+under the PDF.
+
+The process of minimizing the SFHs with respect to the extinction model
+resulted in irregular grids of fit values on the
+$\avf,\dav$ surface (\S \ref{uvr:sfhs.measurement}). For each
+region, we selected all SFHs in the grid within $1\sigma$ of the best-fit SFH
+using the condition $\mathrm{fit-fit_{min}} \le 1$. The distribution for this
+set of SFHs was then used to estimate the $1\sigma$ systematic uncertainties in
+the best-fit SFH related to the measurement of \avf{} and
+\dav{}.
+
+The error bars in Figure \ref{fig:uvr:sfh_grid} correspond to the combination of
+the random and systematic uncertainties. We did not assess the systematic
+uncertainties related to the stellar evolution models used with MATCH.
+
+We use the HMC tests and the ``$1\sigma$'' set of SFHs to estimate the random
+and systematic uncertainties for all quantities derived from the SFHs (\fuv{}
+magnitudes, total masses, etc.). For example, the mass of recently-formed stars
+in a region (see \S \ref{uvr:sfrs}) was calculated for all of the HMC SFHs, and the
+random uncertainty was calculated from the distribution of the resulting
+masses. The systematic uncertainty was estimated from the minimum and maximum
+masses derived from the set of $1\sigma$ SFHs for the region. We then added the
+random and systematic components in quadrature to get the total uncertainty for
+the mass of the best-fit SFH.
+
+
+
+
+
+\section{UV flux modeling}\label{uvr:fluxmod}
+
+We used the SFHs in Figure \ref{fig:uvr:sfh_grid} as a basis for modeling the total
+present-day UV fluxes for each region. This technique was pioneered by
+\citet{Gogarten:2009} in their study of UV-bright regions in the outer disk of
+M81, and has recently been extended to several dozen dwarf galaxies in the
+Local Volume \citep{Johnson:2013}.
+
+Following the procedure described in \citet{Johnson:2013}, the intrinsic
+(unreddened) \fuv{} and \nuv{} fluxes were modeled from the SFHs using the Flexible
+Stellar Population Synthesis (FSPS) code \citep{Conroy:2009, Conroy:2010}. FSPS was
+run using the Padova isochrones \citep{Girardi:2010} and a Kroupa IMF
+\citep{Kroupa:2001}. The metallicity for all regions was set to a constant
+$\met = -0.3\dex$, based on the approximate final
+metallicities of the SFH solutions (\S \ref{uvr:sfhs.results}). The effect of
+assuming a homogeneous metallicity value is discussed in \S
+\ref{uvr:discussion.fuv}.
+
+% First mention: Table 3
+The modeled \fuv{} and \nuv{} fluxes were converted into AB magnitudes using the
+formulae in \citet{Morrissey:2007}, and the uncertainties were calculated as
+described in \S \ref{uvr:sfhs.uncertainties}. The intrinsic \fuv{} magnitudes,
+\fuvsfhz{}, and UV colors, \fuvnuvsfhz{}, of the
+regions are listed in Table \ref{tab:uvr:fluxmod}.
+
+% First mention: Figure 6
+We also modeled the reddened \fuv{} and \nuv{} fluxes using the extinction
+model described in \S \ref{uvr:sfhs.extinction}, the best-fit \avf{} and \dav{}
+values in Table \ref{tab:uvr:SFHdata}, and the \citet[][see \S
+\ref{uvr:discussion.fuv}]{Cardelli:1989} extinction curve. These fluxes were
+converted into AB magnitudes and the uncertainties were evaluated in the same
+manner as the intrinsic fluxes. We list the reddened \fuv{} magnitudes,
+\fuvsfh{}, and the reddened UV colors, \fuvnuvsfh{}, in Table
+\ref{tab:uvr:fluxmod}, and plot the difference between \fuvsfh{} and \fuvobs{}
+versus deprojected region area in Figure \ref{fig:uvr:fluxmod}. The comparison
+between the modeled and observed \fuv{} magnitudes is discussed in \S
+\ref{uvr:discussion.fuv}.
+
+
+% Table 3
+\input{uv_regions-tables/table3}
+
+
+% Figure 6
+\begin{figure}
+\centering
+\includegraphics[scale=1]{uv_regions-figures/fuv.pdf}
+\caption[The difference between the modeled reddened and
+    observed \fuv{} magnitudes
+    versus
+    deprojected area.]{The difference between the modeled reddened (\fuvsfh{}) and
+    observed \citep[\fuvobs{},][]{Kang:2009} \fuv{} magnitudes
+    (proportional to the log of the modeled-to-observed flux ratio) versus
+    deprojected area. The dashed line indicates where the magnitudes are equal.
+    On average, the \fuvsfh{} values are $\sim 0.1\mmag$
+    fainter than \fuvobs{} (dotted line). This difference is
+    consistent with zero to within the $1\sigma$ scatter of $\sim
+    0.8\mmag$. The scatter is greatest among the smallest regions and
+    indicates that discrete sampling of the IMF is important on these scales.
+    The combined region from Figure \ref{fig:uvr:cmd_grid}, indicated by the gray
+    square (red in the color version), shows much better agreement between
+    \fuvsfh{} and \fuvobs{} than the individual regions
+    it comprises.
+}
+\label{fig:uvr:fluxmod}
+\end{figure}
+
+
+
+
+
+\section{SFR estimates}\label{uvr:sfrs}
+
+The usual procedure for converting \fuv{} flux into a SFR is to correct the
+observed flux for extinction, calculate the luminosity, and then apply the
+proper calibration. To test this method, we derived \fuv{} extinction corrections,
+\afuv{}, from the differences between \fuvsfh{} and
+\fuvsfhz{}. The uncertainties in \afuv{} were calculated
+as described in \S \ref{uvr:sfhs.uncertainties}. The resulting values, listed in
+Table \ref{tab:uvr:fluxmod}, were used to correct \fuvobs{}.
+
+% First mention: Table 4
+The extinction-corrected observed \fuv{} magnitudes were converted into SFRs,
+\sfrfuv{}, using the flux calibration from \citet{Kennicutt:1998} with
+updates by \citet{Hao:2011} and \citet{Murphy:2011} \citep[see][]{Kennicutt:2012}:
+\begin{equation}
+\left(\frac{\sfrfuv}{\msun\yr^{-1}}\right) = 10^{-43.35}\,\left(\frac{\lfuv}{\erg\ssec^{-1}}\right)
+\end{equation}
+where \lfuv{} is the \fuv{} luminosity in $\erg\ssec^{-1}$. This
+calibration was derived using the stellar population synthesis code Starburst99
+\citep{Leitherer:1999} assuming that the SFR has been constant over the last
+$100\myr$. It also assumes a fully populated Kroupa IMF
+\citep{Kroupa:2001} and solar metallicity.
+
+Although more sophisticated tracers exist for calculating SFRs \citep[e.g.,
+hybrid tracers discussed in][]{Leroy:2012}, none of them can be used with GALEX
+\fuv{} and NUV data alone and such calculations are therefore outside the scope of
+this study.
+
+The total uncertainties in \sfrfuv{} are the quadrature sum of the
+photometric uncertainties propagated from \fuvobs{} and the random
+and systematic uncertainties derived according to \S \ref{uvr:sfhs.uncertainties}
+(where \sfrfuv{} was calculated for each value of \afuv{}
+from the HMC and $1\sigma$ SFHs). The \sfrfuv{} values are listed in
+Table \ref{tab:uvr:fluxderived} and are shown against the SFHs in Figure
+\ref{fig:uvr:sfh_grid}.
+
+% First mention: Figure 7
+To compare with the flux-based SFRs, we calculated the mean SFR over the last
+$100\myr$ of the SFH, $\sfroneh = \massoneh
+\times 10^{-8}\yr^{-1}$, where \massoneh{} is the total mass formed
+over the same time period. The \sfroneh{} values are
+shown in Figure \ref{fig:uvr:sfh_grid}, and both \massoneh{} and
+\sfroneh{} are listed in Table \ref{tab:uvr:SFHdata}. The
+uncertainties were derived as described in \S \ref{uvr:sfhs.uncertainties}. We also
+calculated the mean SFR over the last $500\myr$, \sfrfiveh{} (Figure \ref{fig:uvr:sfh_grid}).
+The $500\myr$ timescale (the practical age limit of the SFHs, \S \ref{uvr:sfhs.results}) is
+useful for understanding the overall behavior of the regions and illustrates
+the significance of the SF activity in the last $100\myr$ with
+respect to the broader history. Figure \ref{fig:uvr:sfrs} shows the log ratio of
+\sfrfuv{} to \sfroneh{} versus deprojected
+region area, and is discussed in \S \ref{uvr:discussion.sfrs}.
+
+
+% Table 4
+\input{uv_regions-tables/table4}
+
+
+% Figure 7
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{uv_regions-figures/sfr.pdf}
+\caption[The log ratio of the \fuv{} flux-based SFRs to the $100\myr$ mean SFR of the SFHs
+    versus deprojected region area.]{The log ratio of the \fuv{} flux-based SFRs to \sfroneh{},
+    the $100\myr$ mean SFR of the SFHs,
+    versus deprojected region area. The dashed lines indicate where the SFRs
+    are equal, and the mean and standard deviation of each log ratio is shown
+    in its respective panel. On the left, the flux-based SFRs,
+    \sfrfuv{}, were derived from the extinction-corrected observed
+    \fuv{} magnitudes. The \sfrfuv{} values are consistent with
+    \sfroneh{} to within the $1\sigma$ scatter, though
+    variations from the metallicity assumed by the flux calibration can explain
+    approximately one third of the total offset (this effect also applies to
+    the right panel). The primary sources of the scatter are discrete sampling
+    of the IMF and variability in the SFHs. The flux-based SFRs in the right
+    panel, \sfrfuvz{}, were derived from the intrinsic \fuv{}
+    magnitudes modeled from the SFHs. The scatter is primarily due to SFH
+    variability, as IMF sampling is not important for \sfrfuvz{}.
+    In both panels, the combined region from Figure \ref{fig:uvr:cmd_grid},
+    indicated by the gray square (red in the color version), shows much better
+    agreement between the flux-based and mean SFRs than the individual regions
+    it comprises.
+}
+\label{fig:uvr:sfrs}
+\end{figure*}
+
+
+
+
+
+\section{Discussion}\label{uvr:discussion}
+
+\subsection{\fuv{} magnitudes}\label{uvr:discussion.fuv}
+
+The differences between the reddened \fuv{} magnitudes modeled from the SFHs and
+the observed \fuv{} magnitudes of the regions, $\fuvsfh - \fuvobs$,
+shown in Figure \ref{fig:uvr:fluxmod} are normally distributed with a mean and
+standard deviation of $\mu=0.09\mmag$ and $\sigma=0.8\mmag$,
+respectively. The \fuvsfh{} values are consistent with the
+\fuvobs{} values on average, demonstrating that the \fuv{} magnitudes
+are largely free of several potential systematic effects, such as scattering of
+\fuv{} photons from or into the regions or misinterpretation of the CMDs by MATCH.
+
+The consistency of $\mu$ with zero supports the hypothesis from \S
+\ref{uvr:sfhs.extinction} that the $\avf,\dav$ extinction
+model adequately describes the dust affecting the MS stars in the regions.
+Because \afuv{} is derived by extrapolating \avf{} and
+\dav{} along an extinction curve, the lack of a significant offset
+between \fuvsfh{} and \fuvobs{} justifies our adoption of
+the average Galactic extinction curve from \citet{Cardelli:1989} with the standard
+value of $\rv = 3.1$. This is consistent with results from
+\citet{Barmby:2000} and \citet{Bianchi:1996}, who found that the overall extinction
+curves of M31 and the Galaxy are similar for optical and UV wavelengths,
+respectively.
+
+It is somewhat surprising that assuming the \citet{Cardelli:1989} extinction curve
+does not produce a larger systematic offset between \fuvsfh{} and
+\fuvobs{}. Previous studies have shown that local dust properties
+and the shape of the extinction curve strongly depend on environment
+\citep{Fitzpatrick:2007, Bianchi:2011, Efremova:2011}, which brings into question the
+applicability of any galaxy-averaged extinction curve to specific locations
+within a galaxy. Furthermore, results from \citet{Bianchi:2011} and
+\citet{Efremova:2011} indicate that areas of intense SF, such as UV-bright
+regions, tend to have extinction curves that are steeper in the UV regime.
+Despite these details, we find that, given a mean visual extinction of
+$\avf + \dav \approx 1.5$ in the regions, the
+$\mu=0.09\mmag$ offset is consistent with a value of \rv{}
+between 3.1 and 3.2. This is well within the range of \rv{} values
+obtained by \citet{Fitzpatrick:2007} for 328 lines of sight in the Galaxy, for
+which the mean and standard deviation was 3.0 and 0.3, respectively.
+
+Although the modeled and the observed \fuv{} magnitudes agree on average, Figure
+\ref{fig:uvr:fluxmod} shows that the scatter in $\fuvsfh - \fuvobs$
+about the mean is larger than the uncertainties. A possible source of this
+scatter is the assumption of a homogeneous metallicity for the modeled \fuv{}
+magnitudes, $\met = -0.3\dex$, whereas the actual final
+metallicity values for most of the regions varied between $\met =
+-0.6$ and $0.0\dex$ (\S \ref{uvr:sfhs.results}). Figure 6 in
+\citet{Johnson:2013} illustrates how the \fuv{} luminosity of a constant SFR model
+changes as a function of input metallicity. Near $\met =
+-0.3\dex$ \citep[$\logten(Z/Z_\odot) \approx -0.3$, assuming the
+helium-to-metals enrichment law from][]{Bressan:2012}, changing $\met$
+by $\pm 0.1\dex$ causes the modeled \fuv{} flux to change by $\mp
+0.015\dex$, or $\pm 0.038\mmag$ in terms of \fuv{} magnitudes.
+Given a metallicity dispersion of $0.3\dex$, variations from the
+assumed metallicity therefore lead to an uncertainty of about
+$0.1\mmag$ in \fuvsfh{}. The effect of assuming a
+homogeneous metallicity contributes only a small amount to the total scatter.
+
+Figure \ref{fig:uvr:fluxmod} shows that the scatter in $\fuvsfh -
+\fuvobs$ appears to increase with decreasing region area. Because the
+regions are all defined to have the same minimum \fuv{} surface brightness, the
+masses of the regions roughly scale with area, implying that the scatter is
+greatest for the regions with the lowest masses. A well-known characteristic of
+low-mass systems is that the distribution of stellar masses is noticeably
+discrete, particularly with respect to the high-mass end of the IMF where the
+relative probability of star formation is low. As a result, the sampling of
+stellar masses from the IMF is not as complete in such systems as for
+higher-mass systems. This is illustrated in the CMDs in Figure
+\ref{fig:uvr:cmd_grid}, which show the upper MS in many of the regions to be
+sparsely populated compared with the much larger region 4308.
+
+To model UV fluxes from the SFHs, FSPS assumes that the stellar mass formed in
+each age bin represents a full sampling of the IMF, which is inconsistent with
+the actual sampling of stellar masses in the regions. Therefore, the modeled
+flux is underestimated in regions that have an apparent excess of massive MS
+stars relative to the number expected from a fully populated IMF, and is
+overestimated in regions with an apparent lack of massive MS stars. The size of
+this discrepancy should be larger for regions with lower masses due to the
+sampling of the IMF becoming more discrete.\footnote{This effect is often
+associated with the term, ``stochasticity''.} Given that area is a proxy for
+mass in our sample, the scatter in Figure \ref{fig:uvr:fluxmod} is indeed
+consistent with this expectation. We therefore consider the scatter in the
+magnitudes to be caused by the application of the full-IMF assumption where the
+effect of discrete sampling is important.
+
+To further test the impact of region size on the magnitude discrepancy, we
+constructed a larger effective region by combining the photometry of all
+regions, excluding region 4308 (the largest region). We then measured the SFH
+of the combined region and modeled the total \fuv{} magnitude following the same
+procedure used for the other regions. The total area and effective observed \fuv{}
+magnitude (from the combination of the observed magnitudes of the individual
+regions) are given in Table \ref{tab:uvr:observations}, and the CMD is shown in
+Figure \ref{fig:uvr:cmd_grid}. We show the SFH and the corresponding best-fit
+extinction parameters in Figure \ref{fig:uvr:sfh_grid} and Table \ref{tab:uvr:SFHdata},
+respectively. The modeled \fuv{} magnitude is listed in Table \ref{tab:uvr:fluxmod}.
+
+The combined region in Figure \ref{fig:uvr:fluxmod} has a magnitude difference
+similar to region 4308 and is more consistent with the sample mean than the
+majority of the individual regions it comprises. The combined region apparently
+produces a much better representation of stellar masses in the IMF than when
+the regions are considered individually, making the combined region more
+consistent with the full-IMF assumption. This result supports our hypothesis
+that the scatter in the magnitudes is largely explained as a sampling effect of
+the IMF.
+
+We estimate that discrete sampling becomes important for the UV-bright regions
+below an area of $\sim 10^5\pc^2$, and amounts to an uncertainty of
+$\sigma=0.8\mmag$ in the modeled \fuv{} magnitudes, or a factor of
+$10^{|-0.4\sigma|} = 2$ in flux. Determining a characteristic area threshold
+from our sample is difficult, however, due to the lack of regions with areas
+between $10^5$ and $10^6\pc^2$.
+
+
+
+\subsection{SFR estimates from \fuv{} flux}\label{uvr:discussion.sfrs}
+
+Figure \ref{fig:uvr:sfrs} shows many of the same features as Figure
+\ref{fig:uvr:fluxmod}, namely log-normally distributed ratios with a mean offset
+and scatter that is largest among the smallest regions (see \S
+\ref{uvr:discussion.fuv}). The log-normal distribution for the
+$\sfrfuv / \sfroneh$ values shown in Figure
+\ref{fig:uvr:sfrs} has $\mu=0.2$ and $\sigma=0.4$.
+
+The offset in Figure \ref{fig:uvr:sfrs} is less than the scatter, thus the
+\sfrfuv{} values are, on average, consistent with the \sfroneh{} values, although the offset is somewhat larger
+relative to the scatter than in Figure \ref{fig:uvr:fluxmod}. The consistency of
+the \fuv{} magnitudes in Figure \ref{fig:uvr:fluxmod} shows that the offset in the SFR
+ratios is not due to scattering of \fuv{} photons, misinterpretation of the CMDs
+by MATCH, a deficiency in the extinction model, or an inaccurate extinction
+curve. Additionally, both \sfrfuv{} and \sfroneh{} assume a timescale of $100\myr$, so the
+offset is also not due to inconsistent timescales.
+
+One difference between \sfrfuv{} and \sfroneh{}, however, is that the \fuv{} flux calibration was
+derived assuming solar metallicity. The \fuv{} brightness of a stellar population
+decreases with increasing metallicity (see \S \ref{uvr:discussion.fuv}), so the SFR
+of a high-metallicity population would need to be higher than that of a
+low-metallicity population with the same \fuv{} flux and SFH. Specifically,
+overestimating \met{} by $0.1\dex$ causes the SFR to be
+overestimated by $0.015\dex$.
+
+Because nearly all of the final metallicities were subsolar, the majority of
+the \sfrfuv{} values are overestimated to some degree. Solar
+metallicity is higher than the mean final metallicity from MATCH by
+$0.3\dex$, so the \fuv{}-based SFRs are overestimated by about
+$0.05\dex$ on average. Variations from the metallicity assumed by the
+flux calibration therefore account for approximately one third of the $\mu=0.2$
+offset in Figure \ref{fig:uvr:sfrs}. With no other obvious systematic effects at
+work, we attribute the remaining offset to low-number statistics.
+
+Like FSPS, the \fuv{} flux calibration from \citet{Kennicutt:1998} assumes that the
+IMF is fully populated, so discrete sampling of the IMF should produce a
+similar amount of scatter in Figures \ref{fig:uvr:fluxmod} and \ref{fig:uvr:sfrs}.
+Regions that are brighter for their mass than expected from the full-IMF
+assumption will have their \fuv{}-based SFRs overestimated, and regions that are
+fainter than expected will have their SFRs underestimated. As in Figure
+\ref{fig:uvr:fluxmod}, Figure \ref{fig:uvr:sfrs} shows that this discrepancy increases
+with decreasing area. The scatter in the SFR ratios therefore appears
+consistent with the application of the full-IMF assumption to low-mass regions.
+By comparing the $\sigma$ parameters of the log-normal distributions in Figures
+\ref{fig:uvr:fluxmod} and \ref{fig:uvr:sfrs} ($|-0.4 \times 0.8|=0.3$ and 0.4,
+respectively), however, we find that the SFR ratios are somewhat more scattered
+than the magnitude differences. This suggests that there is an additional
+factor contributing to the scatter.
+
+In addition to the full-IMF assumption, the \fuv{} flux calibration assumes a
+constant SFR over at least the past $\sim 100\myr$. It is clear from
+the SFHs in Figure \ref{fig:uvr:cmd_grid} that none of the regions are consistent
+with this assumption. To test how the inconsistency with the constant-SFR
+assumption affects the SFR estimates, we used the \fuv{} flux calibration to
+derive another set of SFRs from the modeled intrinsic magnitudes in Table
+\ref{tab:uvr:fluxmod}, \sfrfuvz{}. Both FSPS and the flux calibration
+assume a fully populated IMF, so \sfrfuvz{} is determined
+self-consistently. Also, despite the fact that the regions are largely
+inconsistent with the full-IMF assumption, \sfroneh{}
+depends only on the total mass formed in the SFH, not on how the stellar masses
+were sampled from the IMF. Therefore, any discrepancies between
+\sfrfuvz{} and \sfroneh{} beyond the
+measured uncertainties are not due to discrete IMF sampling.
+
+The log ratios of \sfrfuvz{} to \sfroneh{}
+are shown versus deprojected region area in Figure \ref{fig:uvr:sfrs}. As for the
+SFR ratios from the observed \fuv{} magnitudes, we assumed a log-normal
+distribution and calculated $\mu$ and $\sigma$ to be 0.1 and 0.3, respectively.
+As expected, we find that the \fuv{}-based SFRs are consistent with the mean SFRs
+on average. The SFR ratios are widely scattered, indicating that the accuracy
+of the \fuv{}-based SFR estimates is strongly affected by variations in the SFHs.
+In the extreme case of an SSP, \citet{Leroy:2012} found that \fuv{}-based SFR
+estimates are intrinsically scattered by a factor of $\sim 3$ to 4 ($\sigma
+\approx 0.5$ to 0.6 in log space) due to uncertainty about the age of the SSP
+within a $100\myr$ timescale. The uncertainty we measure,
+$\sigma=0.3$, is within the intrinsic limit, which we expect given that the
+regions are more complex than SSPs (see \S \ref{uvr:discussion.ssp}).
+
+The dependence of the flux-based SFRs on the SFHs is further illustrated by the
+combined region in Figure \ref{fig:uvr:sfrs}. The
+$\sfrfuvz / \sfroneh$ ratio for the combined
+region is similar to that of region 4308 (the largest region) and is more
+consistent with unity than for most of the individual regions it comprises. By
+combining the regions, many of the variations in the individual SFHs are
+averaged out and the combined SFH is more constant by comparison.
+
+Taken together, the uncertainties due to discrete sampling of the IMF and
+variability in the SFHs account for the total amount of scatter in the
+$\sfrfuvz / \sfroneh$ ratios, as shown from the
+quadrature sum of the $\sigma$ values of the log-normals, $0.3^2 + 0.3^2
+\approx 0.4^2$. The uncertainty components are also the same size,
+demonstrating that satisfying the full-IMF assumption and satisfying the
+constant-SFR assumption are equally important for obtaining precise SFR
+estimates from the \fuv{} flux calibration. Inconsistencies with the full-IMF and
+constant-SFR assumptions appear to become important in UV-bright regions
+smaller than $\sim 10^5\pc^2$. Assuming that one has a robust \fuv{}
+extinction correction, \fuv{}-based SFRs estimated for regions smaller than this
+limit are uncertain by a factor of about 2.5. We stress that this factor
+represents the best case uncertainty, as the dust corrections for integrated UV
+flux are often unclear and substantial. Our results are consistent with
+warnings from \citet{Murphy:2011}, \citet{Kennicutt:2012}, and \citet{Leroy:2012} that
+flux calibrations become problematic on sub-kpc scales.
+
+Perhaps the most important assumptions behind the flux calibration method are
+the assumed SFH and that SFR has a clear relationship with observed flux.
+However, it is ambiguous whether the difference in flux between two populations
+is due to a simple difference in SFR because the observed flux strongly depends
+on the underlying SFH. This dependence is observed on scales both large and
+small, e.g., as demonstrated for UV color in spiral galaxies by
+\citet{Barnes:2011} and for \fuv{} flux in our sample of UV-bright regions. We find,
+for example, that although region 4299 and 4350 have total masses (and thus
+mean SFRs) within 5\%, their SFHs are quite different and the \fuv{} flux of
+region 4350 is more than a factor of 2 brighter than that of 4299. We also find
+that \fuv{} flux is often degenerate with SFH (a wide range of SFHs can give rise
+to the same \fuv{} flux), such as the case for regions 4318 and 4330. These
+complexities illustrate the inherent difficulty of using integrated flux alone
+to characterize SF.
+
+
+
+\subsection{SSP ages and masses}\label{uvr:discussion.ssp}
+
+Because the integrated UV spectrum of an SSP evolves significantly over
+relatively short timescales \citep[$\sim$ few Myr, as indicated in SSP models
+from][]{Leitherer:1999}, the integrated $\fuv - \nuv$ color can, in
+principle, be used to estimate age through population synthesis modeling.
+Clearly, this technique rests on the assumption that the population
+approximates an SSP, i.e., that the population can be characterized by a single
+age. The SSP assumption is typically acceptable for stellar clusters where
+stars form at effectively the same time, but it becomes untenable whenever the
+SFH is more complex than a single SF event.
+
+\citetalias{Kang:2009} estimated SSP ages, \agessp{}, for the regions
+by comparing the observed $\fuv - \nuv$ colors with Padova stellar
+evolution models \citep{Girardi:2010} for a range of metallicities and dust types.
+The models were reddened according to the average \ebv{} measured in
+the regions (see \S \ref{uvr:sfhs.extinction}). The ages derived for solar
+metallicity and $\rv = 3.1$ are shown with the SFHs in Figure
+\ref{fig:uvr:sfh_grid} and are listed in Table \ref{tab:uvr:fluxderived}. It is
+immediately clear from the SFHs that the majority of the regions to not
+approximate SSPs and that the very concept of assigning single ages to these
+regions is invalid. Furthermore, the \agessp{} values often do not
+correspond to the main episodes of SF.
+
+% First mention: Figure 8
+The corresponding SSP masses, \massssp{}, were estimated by
+\citetalias{Kang:2009} from \agessp{} and the \fuv{} luminosity. We list
+the \massssp{} values in Table \ref{tab:uvr:fluxderived} and show the log of
+$\massssp / \massoneh$ versus deprojected region area in Figure
+\ref{fig:uvr:masses}. Most of the \massssp{} values are within one or two
+orders of magnitude of \massoneh. This large uncertainty range is a consequence
+of applying the SSP assumption to regions that are generally not SSPs. By
+coloring each point in Figure \ref{fig:uvr:masses} by \agessp{}, we find
+that the masses for regions determined to be young are underestimated, and the
+masses for regions determined to be older are overestimated (an old SSP must be
+more massive than a young SSP to have the same UV luminosity). This trend is
+observed independent of region size.
+
+
+% Figure 8
+\begin{figure}
+\centering
+\includegraphics[scale=1]{uv_regions-figures/mass.pdf}
+\caption[The log ratio of the SSP masses based on UV color and luminosity
+    to the total mass formed over the last
+    $100\myr$ of the SFHs versus deprojected region area.]{The log ratio of the SSP masses based on UV color and luminosity,
+    \massssp{}, to the total mass formed over the last
+    $100\myr$ of the SFHs, \massoneh, versus deprojected region area.
+    The markers are shaded (colored in the color version) according to the SSP
+    age, \agessp{}, corresponding to \massssp{}. The dashed
+    line indicates where the masses are equal. SSP masses are underestimated
+    and overestimated for regions that are estimated to be young and old,
+    respectively. The circled points indicate the most SSP-like regions
+    identified in the sample (\S \ref{uvr:discussion.ssp}). At
+    $\logten(\massssp / \massoneh) \approx 3$, region 4331 is extremely
+    discrepant and we do not include it in our SSP analysis. The
+    \massssp{} values for the other SSP-like regions indicate a factor of
+    3 to 4 uncertainty with respect to the \massoneh{} values.
+}
+\label{fig:uvr:masses}
+\end{figure}
+
+
+Although most of the regions are not SSPs, we do find that the SSP assumption
+is justified in some cases. To identify SSP-like regions, we calculated the
+ratio of the mass formed in the age bin with the highest SFR over the last
+$100\myr$, \masspeak{}, to the total mass formed over the same
+time period, \massoneh{}. The values of \masspeak{},
+$\masspeak / \massoneh$, and \agepeak{} (the mean age of the bin
+containing \masspeak{}) are listed in Table \ref{tab:uvr:SFHdata}. We
+considered any region with $\masspeak / \massoneh \ge 0.9$ to be consistent
+with an SSP, i.e., any region that has formed more than 90\% of its total mass
+in a single age bin over the last $100\myr$. We found that 18\% of
+the regions (6 of 33; 4331, 4333, 4345, 4355, 4360, and 4362) meet this
+criterion and we indicate them in Tables \ref{tab:uvr:observations},
+\ref{tab:uvr:SFHdata}, \ref{tab:uvr:fluxmod} and \ref{tab:uvr:fluxderived}.
+
+Except for region 4331, the mean discrepancy between \agessp{} and
+\agepeak{} for the SSP-like regions is $10\myr$. On
+average, \massssp{} is consistent with \massoneh{} to within a factor of 3
+or 4 (excluding region 4331). These age and mass discrepancies are often larger
+than the error bars shown in Figures \ref{fig:uvr:sfh_grid} and \ref{fig:uvr:masses}.
+Region 4331 is extremely discrepant in both age ($\agessp -
+\agepeak = 80\myr$) and mass ($\massssp / \massoneh = 800$) for
+reasons that are unclear, and we do not include it in the remaining analyses.
+
+The uncertainties in \agessp{} are about $3\myr$, on
+average, and are propagated solely from the photometric uncertainties. We
+suggest that these uncertainties are underreported, given that metallicity and
+extinction can potentially introduce systematics that are much larger than the
+uncertainties in \fuv{} luminosity and $\fuv - \nuv$ color. We consider below
+how metallicity and extinction affect the age and mass estimates.
+
+Metallicity increases the rate at which an SSP becomes redder with age
+\citep{Bianchi:2011, Kang:2009}. Therefore, if metallicity is overestimated, then
+\agessp{} will be underestimated. To test how significantly
+metallicity affects the ages of the SSP-like regions, we compared the ages for
+solar metal abundance with the ages derived by \citetalias{Kang:2009} for
+$Z=0.05$. The change in metallicity decreased the SSP age estimates by an
+average of $6\myr$. We also compared the corresponding masses and
+found that the masses for solar metal abundance were, on average, a factor of 2
+larger than the those for $Z=0.05$.
+
+Since UV flux is highly susceptible to dust extinction, any errors in the
+applied reddening values can significantly affect the derived SSP ages and
+masses. Namely, if \ebv{} is underestimated, then the corrected
+$\fuv - \nuv$ color will be redder than it should be \citep[assuming the
+extinction curve of][although this is another potential source of
+uncertainty]{Cardelli:1989}, causing an overestimate in \agessp{}. The
+change in \massssp{} is less clear because underestimating the \fuv{}
+luminosity and overestimating the age have opposite effects.
+
+To quantify the impact of changes in $\fuv - \nuv$ color on
+\agessp{} and \massssp{}, we used FSPS (see \S \ref{uvr:fluxmod})
+to model the time evolution of the UV magnitudes of an SSP with solar
+metallicity. For a $10\myr$ old SSP ($\fuv - \nuv \approx
+-0.09$), we found that a $0.1\mmag$ reduction in \ebv{}
+causes the age to be overestimated by $25\myr$ and the mass to be
+overestimated by a factor of 2.6. \agessp{} and \massssp{} are
+therefore highly sensitive to changes in $\fuv - \nuv$.
+
+Systematics from the assumed metallicity and the extinction correction can
+plausibly account for the observed age and mass discrepancies among the
+SSP-like regions. From these discrepancies, we propose that more realistic
+uncertainties for the ages and the masses derived from UV flux are
+$10\myr$ and a factor of 3 to 4, respectively, though the limited
+number of regions resembling SSPs makes more precise uncertainties difficult to
+determine. The most striking aspect of this analysis is that over 80\% of the
+regions in the sample are entirely inconsistent with the SSP assumption in the
+first place, a fact that could not be known without measuring the SFHs, calling
+into question the practice of deriving ages and masses for populations that are
+not confirmed SSPs.
+
+
+
+
+
+\section{Conclusion}\label{uvr:conclusion}
+
+In this study, we have derived the recent ($< 500\myr$) SFHs of 33
+UV-bright regions in M31 using optical HST observations from PHAT. The regions
+were defined by \citetalias{Kang:2009} based on GALEX \fuv{} surface brightness and
+have areas ranging from $8 \times 10^3$ to $1.5 \times 10^6\pc^2$. We
+used the SFH code MATCH to fit the CMDs of the regions and measure their the
+SFHs based on the resolved stars from the PHAT photometry. We modeled the
+extinction in the regions using a foreground parameter and a differential
+parameter, which were optimized for each region to find the best-fit SFH.
+
+We used FSPS to model both the intrinsic and reddened \fuv{} and \nuv{} magnitudes of
+the regions based on their SFHs. The differences between the modeled reddened
+and the observed \fuv{} magnitudes, $\fuvsfh - \fuvobs$, followed a
+normal distribution with $\mu=0.09$ and $\sigma=0.3$. On average, the
+\fuvsfh{} values were consistent with the \fuvobs{}
+values, confirming the reliability of the SFHs, our extinction model, and the
+\citet{Cardelli:1989} extinction curve. We attribute the scatter in the flux
+ratios to the assumption made by FSPS that the IMF is fully populated while the
+actual distribution of stellar masses becomes more discrete as smaller regions
+are considered.
+
+The observed, extinction-corrected \fuv{} magnitudes were converted into SFRs,
+\sfrfuv{}, using the \fuv{} flux calibration from \citet{Kennicutt:1998}
+with updates by \citet{Hao:2011} and \citet{Murphy:2011}. We also derived the mean
+SFRs for the last $100\myr$ of the SFHs, \sfroneh{}. The $\sfrfuv / \sfroneh$
+ratios were log-normally distributed with $\mu=0.2$
+and $\sigma=0.4$. Overall, the \sfrfuv{} values were consistent with
+the \sfroneh{} values, though a small amount of the
+offset was attributable to inconsistencies with the metallicity assumed by the
+flux calibration.
+
+The intrinsic modeled \fuv{} magnitudes were also converted into SFRs,
+\sfrfuvz{}, which were free from biases due to extinction
+corrections and IMF sampling. The log-normal for the
+$\sfrfuvz / \sfroneh$ ratios had $\mu=0.1$
+and $\sigma=0.3$, indicating that assuming a constant SFR (implicit in the flux
+calibration) for regions with highly variable SFHs is an important source of
+scatter. We conclude that the total scatter in the $\sfrfuv / \sfroneh$ ratio
+is due to the assumptions of a full IMF and a
+constant SFR in regions where discrete sampling of the IMF and high variability
+in the SFHs are important. Combined, these effects result in a factor of 2.5
+uncertainty in the \fuv{}-based SFRs. Although there is a significant lack of
+regions in our sample with areas between $10^5$ and $10^6\pc^2$, we
+estimate that discrete IMF sampling and SFH variability become important below
+$10^5\pc^2$, or scales of a few hundred pc.
+
+Ages and masses were derived for the regions by \citetalias{Kang:2009} from
+observed $\fuv - \nuv$ color and \fuv{} luminosity, using the assumption that
+the regions are SSPs. By comparing the ages to the SFHs, we found that most of
+the regions are entirely inconsistent with the SSP assumption. Furthermore, the
+ages often did not correspond to the main episodes of SF, and the masses were
+discrepant with the masses integrated from the SFHs by up to 2 orders of
+magnitude. These results call into question the practice of deriving ages and
+masses for populations that are not confirmed SSPs.
+
+We identified SSP-like regions as regions which formed 90\% or more of their
+mass over the past $100\myr$ in a single age bin of their SFH. These
+regions accounted for 18\% of our sample (6 of 33). Among this subset, we found
+discrepancies of $10\myr$ in the ages and a factor of $3-4$ in the
+masses derived from UV flux, most likely due to systematics in metallicity and
+extinction. We propose that these discrepancies represent realistic
+uncertainties in the SSP ages and masses, though the limited number of SSP-like
+regions in our sample makes the uncertainties difficult to determine. Finally,
+identification of the SSP-like regions was not possible from integrated \fuv{}
+flux.
+
+We thank Y.~Kang for his assistance in understanding the results presented in
+\citet{Kang:2009}. This research has made use of NASA's Astrophysics Data System
+Bibliographic Services and the NASA/IPAC Extragalactic Database (NED), which is
+operated by the Jet Propulsion Laboratory, California Institute of Technology,
+under contract with the National Aeronautics and Space Administration. This
+work was supported by the Space Telescope Science Institute through GO-12055.
+Support for D.~R.~W is provided by NASA through Hubble Fellowship grant
+HST-HF-51331.01 awarded by the Space Telescope Science Institute, which is
+operated by the Association of Universities for Research in Astronomy, Inc.,
+under NASA contract NAS 5-26555. This research made use of Astropy, a
+community-developed core Python package for Astronomy \citep{Astropy_Collaboration:2013}, as well
+as NumPy and SciPy \citep{Oliphant:2007}, IPython \citep{Perez:2007}, and Matplotlib
+\citep{Hunter:2007}.
