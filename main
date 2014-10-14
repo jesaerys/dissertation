@@ -35,8 +35,22 @@
 #   :set spellfile=spell.utf-8.add
 #   :set spell
 
-vim -c "source vim-view.vim" \
-    -c "set spellfile=spell.utf-8.add" \
+#vim -c "source vim-view.vim" \
+#    -c "set spellfile=spell.utf-8.add" \
+#    -c "set spell" \
+#    notes.txt \
+#    dissertation.tex \
+#    title.tex \
+#    abstract.tex \
+#    acknowledgments.tex \
+#    dedication.tex \
+#    introduction.tex \
+#    uv_regions.tex \
+#    m31flux.tex \
+#    summary.tex \
+#    references.bib \
+
+vim -c "set spellfile=spell.utf-8.add" \
     -c "set spell" \
     notes.txt \
     dissertation.tex \

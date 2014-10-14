@@ -66,11 +66,92 @@ regions in our sample makes the uncertainties difficult to determine. Finally,
 identification of the SSP-like regions was not possible from integrated \fuv{}
 flux.
 
+We have used SFHs to model the SEDs of over 9000 sub-\kpc{} regions in M31 and
+produce detailed maps of synthetic UV flux across the entire PHAT survey area.
+This work is an extensive follow-up to the analysis of \citet{Simones:2014},
+which involved only 33 UV-bright regions from a small portion of the galaxy.
+The SFHs were derived by \citet{Lewis:2014}\ using \acsb{} and \acsi{}
+photometry from the PHAT survey. Both intrinsic and attenuated SEDs were
+derived from the SFHs using FSPS. These were convolved with the GALEX \fuv{}
+and \nuv{} response curves to obtain the synthetic intrinsic fluxes, \fxsfhz{},
+as well as the synthetic attenuated fluxes, \fxsfh{}. All of the flux values
+were then assembled into an overall map, or mosaic, using Montage. The mosaic
+pixels corresponded to physical areas of $4.4\times 10^4\pc^2$. We constructed
+corresponding maps for the observed flux, \fxobs{}, using GALEX DIS images.
+
+The \fxsfh{} maps agreed with the \fxobs{} maps very well with respect to the
+broad morphology of M31, faithfully reproducing all of the main features
+brighter than $\sim 10^{-15}\uflambda$. We found the log ratios of \fxsfh{} to
+\fxobs{} to be log-normally distributed with $\mu = 7.62\times 10^{-3}$ and
+$\sigma = 2.37\times 10^{-1}$ for \fuv{}, and $\mu = -1.03\times 10^{-1}$ and
+$\sigma = 1.59\times 10^{-1}$ for \nuv{}. In both filters, $\mu$ was within
+$\sigma$ of a log flux ratio of 0, indicating that \fxsfh{} was consistent with
+\fxobs{} on average. Due to the small pixel areas, the primary source of the
+variance in the log flux ratios was most likely related to incomplete sampling
+of the IMF.
+
+We found no obvious trends in the flux ratios with respect to environment,
+except for in the faintest, off-arm areas of the M31 where the variances in the
+flux ratios were noticeably larger. We conclude that fluxes may be successfully
+modeled from SFHs for any population in environments similar to M31. For our
+sub-\kpc{} regions, we estimate the synthetic flux uncertainties to be
+$10^\sigma = 1.7$ and 1.4 times the observed flux in \fuv{} and \nuv{},
+respectively. Results from previous work on UV-bright regions by
+\citet{Simones:2014} were consistent with our results.
+
+The overall agreement between the observed and synthetic fluxes is remarkable
+considering that our flux modeling procedure was dependent on several key
+assumptions. Specifically, we assumed an IMF, models describing stellar spectra
+and evolution, and an extinction model as well as an extinction curve. These
+form the foundation for much research in astronomy and encompass our current
+best understanding of stellar astrophysics and star formation. It is reassuring
+that we can use all of this knowledge to successfully recreate detailed maps of
+a galaxy from photometry in just two optical bands.
+
+We used flux calibrations from \citet{Kennicutt:1998} with updates by
+\citet{Hao:2011} and \citet{Murphy:2011} to estimate SFRs based on observed UV
+flux, \sfrx{}. The \fxobs{} maps were first corrected for extinction using the
+synthetic attenuated and intrinsic fluxes. We also calculated the $100\myr$
+mean SFR from the SFHs, \sfroneh{}. We found that the faintest areas of M31 had
+the highest ratios of \sfrx{} to \sfroneh{} and formed a linear tail feature in
+plots of the SFR ratio versus \sfroneh{}. These tails were the result of a
+distinct breakdown of the linear relationship between flux and SFR which
+underpins the flux calibration method. We estimated a conservative threshold of
+$\sfr \sim 10^{-5}\msun\yr^{-1}$ below which flux calibration should not be
+used.
+
+For the pixels above this threshold, we found the SFR ratios to be log-normally
+distributed with $\mu = -2.46\times 10^{-1}$ and $\sigma = 2.61\times 10^{-1}$
+for \fuv{}, and $\mu = 9.27\times 10^{-2}$ and $\sigma = 2.33\times 10^{-1}$
+for \nuv{}. $\mu$ was within $\sigma$ of 0 for both the log SFR ratios in both
+\fuv{} and \nuv{}, indicating that \sfrx{} was consistent with \sfroneh{} on
+average. As for the flux ratios, incomplete sampling of the IMF was the main
+source of the variance in the SFR ratios. We also considered deviations from
+solar metallicity as well as SFH variability, and found that they were far less
+important for the overall variances in the SFR ratios than IMF sampling.
+
+Other than the faintest, off-arm areas which responsible for the tail feature
+in the SFR ratio distributions, there were no found no obvious trends in the
+SFR ratios with respect to environment. We determine that the flux calibration
+method is safely applicable to environments similar to M31, \emph{but only as
+long as the resulting \sfr{}s are greater than $\sim 10^{-5}\msun\yr^{-1}$}. We
+estimate the SFR uncertainties for our sub-\kpc{} regions to be $10^\sigma =
+1.8$ (\fuv{}) and 1.7 (\nuv{}) times the true, underlying $100\myr$-mean SFR.
+The \sfrfuv{} uncertainty is slightly less than the factor of 2.5 uncertainty
+previously estimated found by \citet{Simones:2014}.
+
+We also measured global SFRs for the entire PHAT survey area. The global
+\sfroneh{} value was $0.30\msun\yr^{-1}$, while the UV flux-based values were
+$\sfrfuv = 0.22\msun\yr^{-1}$ and $\sfrnuv = 0.43\msun\yr^{-1}$. These values
+are, respectively, about 30\% lower and 40\% higher than the global \sfroneh{},
+and are well within the uncertainties derived from the SFR maps. The variances
+in the SFR ratios due to IMF sampling is expected to decrease for larger areas,
+however, so our estimated uncertainties should be considered firm upper limits
+when applied to galaxies.
 
 \textbf{*** TODO}
 
 \begin{enumerate}
-\item Insert the summary from Chapter \ref{m31flux} here.
 \item Compare and contrast the SFR results from Chapters \ref{uv_regions} and
     \ref{m31flux}. Are they consistent? How are they different and why?
 \item Discuss the next steps for this line of work.
