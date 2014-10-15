@@ -1,32 +1,32 @@
 \chapter{Introduction}
 \label{introduction}
 
-\section{Stellar population modeling}
-
-SSP modeling requires stellar evolution models, stellar spectral libraries, and
-IMF; all of these (except the IMF, if it's universal) depend on metallicity.
-
-SPS codes are typically based on one dimensional models, but processes like
-convection, rotation, mass-loss, close binary interactions, and thermal
-pulsation are inherently three dimensional.
-
-Core and envelope ``overshooting'' refers to in increase in size of a
-convective layer relative to a more classical radiative-convective boundary.
-The amount of overshooting is essentially a free parameter that is tuned by
-observations.
-
-SPS codes typically do not include binary evolution.
-
-Input models are not usually completely theoretical, but rather
-``semi-empirical'' such that the physics of the models are tuned using
-observations. For example, the TP-AGB component of the Padova isochrones
-\citep{Marigo:2008} was calibrated using observations of nearby galaxies
-\citep{Girardi:2010}.
-
-
+%\section{Stellar population modeling}
+%
+%SSP modeling requires stellar evolution models, stellar spectral libraries, and
+%IMF; all of these (except the IMF, if it's universal) depend on metallicity.
+%
+%SPS codes are typically based on one dimensional models, but processes like
+%convection, rotation, mass-loss, close binary interactions, and thermal
+%pulsation are inherently three dimensional.
+%
+%Core and envelope ``overshooting'' refers to in increase in size of a
+%convective layer relative to a more classical radiative-convective boundary.
+%The amount of overshooting is essentially a free parameter that is tuned by
+%observations.
+%
+%SPS codes typically do not include binary evolution.
+%
+%Input models are not usually completely theoretical, but rather
+%``semi-empirical'' such that the physics of the models are tuned using
+%observations. For example, the TP-AGB component of the Padova isochrones
+%\citep{Marigo:2008} was calibrated using observations of nearby galaxies
+%\citep{Girardi:2010}.
 
 
-\section{My introduction 1}
+
+
+\section{Evaluating ultraviolet flux as a star formation tracer on sub-kpc scales}
 
 A common technique for estimating global star formation rates (SFRs) in
 individual galaxies is to measure the total flux at wavelengths known to trace
@@ -78,25 +78,14 @@ Galaxy Evolution Explorer (GALEX) far-UV (\fuv{}, $\lambda \sim
 $10^6\pc^2$. This range of sizes allowed us to test the reliability
 of the full-IMF, constant-SFR, and SSP assumptions on sub-kpc scales.
 
-This paper is organized as follows. We describe our sample of UV-bright regions
-and show their CMDs from the PHAT photometry in \S \ref{uvr:observations}. We
-summarize the CMD-fitting process, describe our extinction model, and present
-the resulting SFHs of the regions in \S \ref{uvr:sfhs}. \S \ref{uvr:fluxmod} describes
-the modeling of UV magnitudes from the SFHs, and \S \ref{uvr:sfrs} describes the
-total masses and the mean SFRs from the SFHs, as well as the SFRs based on UV
-flux. In \S \ref{uvr:discussion}, we compare the UV flux-based SFRs, ages, and
-masses with the results from the SFHs, discuss the applicability of the
-full-IMF, constant-SFR, and SSP assumptions to our sample, and attempt to
-quantify the uncertainties associated with using UV flux to estimate SFRs,
-ages, and masses for sub-kpc UV-bright regions.
 
 
 
+\section{From sub-kpc to galactic-scales: evaluating ultraviolet flux using
+synthetic ultraviolet flux maps of M31}
 
-\section{My introduction 2}
-
-M31 is well-studied, $\sim L_\ast$ galaxy and has been observed at a variety of
-wavelengths, e.g., in the ultraviolet (UV) by the Galaxy Evolution Explorer
+M31 is a well-studied, $\sim L_\ast$ galaxy and has been observed at a variety
+of wavelengths, e.g., in the ultraviolet (UV) by the Galaxy Evolution Explorer
 \citep[GALEX;][]{Morrissey:2007}, in the optical, including H$\alpha$, for the
 Local Group Galaxies Survey \citep{Massey:2006}, and in the infrared by the
 Spitzer Space Telescope \citep{Gordon:2006}. The wealth of high-quality data
@@ -106,34 +95,33 @@ initial mass function (IMF), stellar evolution and spectra models, and
 extinction curves are all required to model the light produced by a galaxy.
 
 A critical ingredient for modeling the flux from a galaxy is a detailed
-knowledge about its underlying star formation history (SFH). Deriving SFHs by
-color-magnitude diagram (CMD) analysis is a reliable method that can be used
-whenever photometry of resolved stars is available. An extensive optical
-photometric catalog for M31 has been compiled by the Panchromatic Hubble
-Andromeda Treasury \citep[PHAT][]{Dalcanton:2012}, and \citet{Lewis:2014} have
-used these data to derive the spatially-resolved SFH of the northeast quadrant.
-With sub-\kpc{} resolution, this SFH dataset is the ideal input for stellar
-population synthesis codes that model total flux given a population's star
-formation rate (SFR) and metallicity evolution. The result is a set of
-spatially-resolved maps of synthetic broadband flux in M31 which can be
-compared with observations.
+knowledge of its underlying SFH. Deriving SFHs by CMD analysis is a reliable
+method that can be used whenever photometry of resolved stars is available. An
+extensive optical photometric catalog for M31 has been compiled by PHAT
+\citep{Dalcanton:2012}, and \citet{Lewis:2014} have used these data to derive
+the spatially-resolved SFH of the northeast quadrant. With sub-kpc resolution,
+this SFH dataset is the ideal input for stellar population synthesis codes that
+model total flux given a population's SFR and metallicity evolution. The result
+is a set of spatially-resolved maps of synthetic broadband flux in M31 which
+can be compared with observations.
 
-The \citet{Lewis:2014} SFHs can also be used to create temporally-average SFR
+The \citet{Lewis:2014} SFHs can also be used to create temporally-averaged SFR
 maps. Because the SFHs were derived from the resolved stars without any prior
 assumptions about the SFHs, such maps provide a standard against which
 flux-based SFR estimates \citep[e.g., using any of the calibrations
 from][]{Kennicutt:2012} can be tested. Using integrated flux to estimate SFRs
-for distant galaxies where resolved stars are not available is a common
-technique in extragalactic astronomy. Some studies have investigated how
-flux-based SFR estimators hold up against resolved-star SFHs in sub-\kpc{}
+for distant galaxies, where resolved stars are not available, is a common
+technique in extragalactic astronomy. Previous studies have investigated how
+flux-based SFR estimators hold up against resolved-star SFHs in sub-kpc
 UV-bright regions \citep{Simones:2014} and in low-metallicity dwarf galaxies
-\citep{McQuinn:2014}, yet relatively little attention has been paid to the
-accuracy of such estimators in general.
+\citep{McQuinn:2014}. The SFHs of \citet{Lewis:2014} based on data from PHAT
+make it possible to broaden this type of analysis to include a wide variety of
+environments in the most prominent local group spiral galaxy.
 
 In this study, we have used the PHAT CMD-based SFHs and stellar population
-synthesis to create maps of synthetic ultraviolet (UV) flux at sub-\kpc{}
+synthesis to create maps of synthetic ultraviolet (UV) flux at sub-kpc
 resolution for the northeast quadrant of M31. We then compared the synthetic
-flux maps with observations from GALEX. We currently only focus on GALEX \fuv{}
+flux maps with observations from GALEX. We have only focused on GALEX \fuv{}
 and \nuv{} (far and near UV), though this work can easily be extended to other
 wavelength regimes. In \S \ref{mfx:syntheticfluxmaps}, we describe the SFH
 dataset and the production of the synthetic flux maps. \S
@@ -143,5 +131,3 @@ SFHs and the observed fluxes using common flux-SFR calibrations are described
 in \S \ref{mfx:sfrestimates}. In \S \ref{mfx:discussion}, we compare the
 synthetic maps with the observations and compare mean SFR maps with SFRs
 estimated from observed flux. We conclude in \S \ref{mfx:conclusion}.
-
-
