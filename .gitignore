@@ -7,3 +7,5 @@
 *.out
 *.swp
 *.toc
+
+*.sla.autosave
